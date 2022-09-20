@@ -1,5 +1,4 @@
-# dev
-pipeline
+
 package com.telushealth.thcp.pipeline.common.util
 
 @Grapes([
@@ -22,9 +21,9 @@ class BitbucketUtil {
 
     private static final Logger log = Logger.getLogger(BitbucketUtil.class.name)
 
-    private static final BITBUCKET_NONP_URL = "https://api.github.com"
+    private static final BITBUCKET_NONP_URL = "https://github.com"
 
-    private static final BITBUCKET_PROD_URL = "https://api.github.com"
+    private static final BITBUCKET_PROD_URL = "https://github.com"
 
     static String getBitbucketUrl(Script script) {
         def jenkinsEnv = JenkinsUtil.getJenkinsEnv(script)
@@ -34,7 +33,7 @@ class BitbucketUtil {
     static StashClient getStashClient(Script script) {
         try {
             
-            String bitbucketUrl = "https://api.github.com"
+            String bitbucketUrl = "https://github.com"
             
             log.info("Bitbucket Url: ${bitbucketUrl}")
             
